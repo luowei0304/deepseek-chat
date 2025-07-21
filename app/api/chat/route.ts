@@ -1,9 +1,9 @@
-import { DeepSeek } from '@ai-sdk/deepseek';
+import { deepSeek } from '@ai-sdk/deepseek';
 
 export async function POST(req: Request) {
   const { messages } = await req.json();
   
-  const client = new DeepSeek({
+  const client = new deepSeek({
     apiKey: process.env.DEEPSEEK_API_KEY!,
   });
 
